@@ -1,6 +1,7 @@
 .card-profile {
   display: flex;
   align-items: center;
+  margin: 60px 30px 30px 0;
   h2 {
     font-size: 18px;
     margin-top: 0;
@@ -12,5 +13,13 @@
 }
 
 .card-profile-picture {
-  margin-right: 15px;
+  margin-right: 20px;
+}
+
+.gold-star {
+  color: $yellow;
+}
+
+.gray-star {
+  color: $gray-light;
 }

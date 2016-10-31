@@ -5,80 +5,106 @@
 
 <div class="banner-half" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path flat.picture %>');"></div>
 
-<div class="container padded">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-1">
-      <div class="card-profile">
-        <div class="card-profile-picture text-center">
-          <%= image_tag flat.owner_picture, class: "avatar-xlarge" %>
-          <p><%= flat.owner_name %></p>
-        </div>
-        <div class="card-profile-details">
-          <h2><%= flat.summary %></h2>
-          <p><%= flat.city %></p>
-          <% flat.rating.times do%>
-            <i class="fa fa-star" aria-hidden="true"></i>
-          <% end %>
-          <% (5 - flat.rating).times do%>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-          <% end %>
+<div class="header-flat">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+        <div class="card-profile">
+          <div class="card-profile-picture text-center">
+            <%= image_tag flat.owner_picture, class: "avatar-xlarge" %>
+            <p><%= flat.owner_name %></p>
+          </div>
+          <div class="card-profile-details">
+            <h2><%= flat.summary %></h2>
+            <p><%= flat.city %></p>
+            <% flat.rating.times do%>
+              <i class="fa fa-star gold-star" aria-hidden="true"></i>
+            <% end %>
+            <% (5 - flat.rating).times do%>
+              <i class="fa fa-star gray-star" aria-hidden="true"></i>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <div class="booking-form">
-        <h2>Book this flat</h2>
-        <form action="">
-          <div class="form-group">
-            <div class="row">
-              <div class="col-xs-6"><input type="text" placeholder="checkin" class="form-control"></div>
-              <div class="col-xs-6"><input type="text" placeholder="checkout" class="form-control"></div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="booking-form">
+          <h2>Book this flat</h2>
+          <form action="">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-6"><input type="text" placeholder="checkin" class="form-control"></div>
+                <div class="col-xs-6"><input type="text" placeholder="checkout" class="form-control"></div>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <select name="" id="" class="form-control">
-              <option value="1">1 person</option>
-              <option value="2">2 persons</option>
-              <option value="3">3 persons</option>
-            </select>
-          </div>
-          <input type="submit" class="btn btn-danger btn-block" value="Book it">
-        </form>
+            <div class="form-group">
+              <select name="" id="" class="form-control">
+                <option value="1">1 person</option>
+                <option value="2">2 persons</option>
+                <option value="3">3 persons</option>
+              </select>
+            </div>
+            <input type="submit" class="btn btn-danger btn-block" value="Book it">
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="wrapper-grey padded flat-description">
+<div class="wrapper-grey flat-description">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <h3>About this flat</h3>
         <p><%= flat.description %></p>
         <hr>
-        <div class="row">
-          <div class="col-xs-12 col-sm-2">The space</div>
-          <div class="col-xs-12 col-sm-5">
-            <p>Accomodates: <strong><%= flat.accomodates %></strong></p>
-            <p>Bathrooms: <strong><%= flat.bathrooms %></strong></p>
-            <p>Bedrooms: <strong><%= flat.bedrooms %></strong></p>
-            <p>Beds: <strong><%= flat.beds %></strong></p>
+        <div class="row flat-data">
+          <div class="col-xs-12 col-sm-2">
+            <p>The space</p>
           </div>
-          <div class="col-xs-12 col-sm-5">
-            <p>Room type: <strong><%= flat.room_type %></strong></p>
-            <p>Property type: <strong><%= flat.property_type %></strong></p>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-unstyled">
+              <li>Accomodates: <strong><%= flat.accomodates %></strong></li>
+              <li>Bathrooms: <strong><%= flat.bathrooms %></strong></li>
+              <li>Bedrooms: <strong><%= flat.bedrooms %></strong></li>
+              <li>Beds: <strong><%= flat.beds %></strong></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-unstyled">
+              <li>Room type: <strong><%= flat.room_type %></strong></li>
+              <li>Property type: <strong><%= flat.property_type %></strong></li>
+            </ul>
           </div>
         </div>
         <hr>
-        <div class="row">
-          <div class="col-xs-12 col-sm-2">Amenities</div>
-          <div class="col-xs-12 col-sm-5">
-            <p><strong><i class="fa fa-wifi" aria-hidden="true"></i>  <%= flat.wifi? ? "Wifi" : "No Wifi" %></strong></p>
-            <p><strong><i class="fa fa-cutlery" aria-hidden="true"></i>  <%= flat.kitchen? ? "Kitchen" : "No Kitchen" %></strong></p>
+        <div class="row flat-data">
+          <div class="col-xs-12 col-sm-2">
+            <p>Amenities</p>
           </div>
-          <div class="col-xs-12 col-sm-5">
-            <p><strong><i class="fa fa-television" aria-hidden="true"></i>  <%= flat.tv? ? "TV" : "No TV" %></strong></p>
-            <p><strong><i class="fa fa-wheelchair" aria-hidden="true"></i>  <%= flat.access? ? "Easy access" : "Difficult access" %></strong></p>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-unstyled">
+              <li>
+                <i class="fa fa-wifi" aria-hidden="true"></i>
+                <strong><%= flat.wifi? ? "Wifi" : "No Wifi" %></strong>
+              </li>
+              <li>
+                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                <strong><%= flat.kitchen? ? "Kitchen" : "No Kitchen" %></strong>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-unstyled">
+              <li>
+                <i class="fa fa-television" aria-hidden="true"></i>
+                <strong><%= flat.tv? ? "TV" : "No TV" %></strong>
+              </li>
+              <li>
+                <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                <strong><%= flat.access? ? "Easy access" : "Difficult access" %></strong>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

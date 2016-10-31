@@ -1,8 +1,31 @@
+.header-flat {
+  border: solid 1px $gray-light;
+}
+
+
 .flat-description {
+  padding: 50px 0 100px 0;
   h3 {
     font-size: 18px;
   }
   p {
     font-size: 14px;
+  }
+}
+
+.flat-data {
+  font-size: 12px;
+  color: $gray;
+  li {
+    margin-bottom: 3px;
+  }
+  li > i {
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    color: $gray;
+  }
+  li > strong {
+    margin-left: 10px;
   }
 }
