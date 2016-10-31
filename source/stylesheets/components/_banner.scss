@@ -3,6 +3,7 @@
   text-align: center;
   height: 100vh;
   background-size: cover !important;
+  background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,4 +18,9 @@
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 50px;
   }
+}
+
+.banner-half {
+  @extend .banner;
+  height: 50vh;
 }

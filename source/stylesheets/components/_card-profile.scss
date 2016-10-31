@@ -1,0 +1,16 @@
+.card-profile {
+  display: flex;
+  align-items: center;
+  h2 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  p {
+    font-size: 14px;
+    color: $gray;
+  }
+}
+
+.card-profile-picture {
+  margin-right: 15px;
+}

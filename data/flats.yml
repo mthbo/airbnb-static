@@ -1,0 +1,57 @@
+mathieu:
+  owner_name: Mathieu B.
+  picture: card-paris.jpg
+  owner_picture: mathieu.jpg
+  name: Mathieu's home
+  summary: Charming room in Montmartre
+  description: This is a great appartment located in a wonderful neighborhood. You will be nearby many shops and city spots.
+  city: Paris, France
+  wifi: true
+  kitchen: true
+  tv: true
+  access: false
+  accomodates: 4
+  bathrooms: 1
+  bedrooms: 2
+  beds: 3
+  property_type: Apartment
+  room_type: Entire home/apt
+  rating: 4
+emmanuelle:
+  owner_name: Emmanuelle J.
+  picture: card-london.jpeg
+  owner_picture: emmanuelle.jpg
+  name: Emmanuelle's home
+  summary: Nice flat in Piccadilly
+  description: This is a great appartment located in a wonderful neighborhood. You will be nearby many shops and city spots.
+  city: London, UK
+  wifi: false
+  kitchen: false
+  tv: false
+  access: false
+  accomodates: 2
+  bathrooms: 1
+  bedrooms: 1
+  beds: 1
+  property_type: Loft
+  room_type: Room
+  rating: 5
+gabriel:
+  owner_name: Gabriel E.
+  picture: card-brussels.jpeg
+  owner_picture: gabriel.jpg
+  name: Gabriel's home
+  summary: Great place in Brussels downtown
+  description: This is a great appartment located in a wonderful neighborhood. You will be nearby many shops and city spots.
+  city: Brussels, Belgium
+  wifi: true
+  kitchen: true
+  tv: false
+  access: true
+  accomodates: 8
+  bathrooms: 2
+  bedrooms: 2
+  beds: 4
+  property_type: House
+  room_type: Entire home/apt
+  rating: 3
