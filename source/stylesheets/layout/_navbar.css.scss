@@ -89,7 +89,7 @@
   line-height: 40px;
   font-weight: lighter;
   color: $gray;
-  border: 1px solid $gray-lighter;
+  border: 1px solid $gray-light;
   border-radius: 5px;
   padding: 0 10px;
   font-size: 14px;
@@ -100,8 +100,8 @@
 /* Navbar dropdown menu */
 .navbar-wagon-dropdown-menu {
   margin-top: 15px;
-  box-shadow: 1px 1px 4px $gray-lighter;
-  border-color: $gray-lighter;
+  box-shadow: 1px 1px 4px $gray-light;
+  border-color: $gray-light;
   li > a {
     transition: color 0.3s ease;
     font-weight: lighter !important;
