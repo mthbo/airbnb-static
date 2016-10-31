@@ -1,0 +1,16 @@
+<div class="container text-center padded">
+  <h1>Our team</h1>
+  <ul class="list-inline text-center">
+    <% ["mathieu", "emmanuelle", "gabriel"].each do |member| %>
+      <li class="spaced">
+        <h3><%= member.capitalize %></h3>
+        <%= image_tag "#{member}.jpg", class: "img-circle avatar-xlarge" %>
+      </li>
+    <% end %>
+  </ul>
+  <h3 class="padded">
+    <% link_to "mailto:contact@airbnb.com" do %>
+      <i class="fa fa-envelope-o" aria-hidden="true"></i>  contact@airbnb.com
+    <% end %>
+  </h3>
+</div>
